@@ -2,10 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { QimaComponent } from './qimaQA/qima.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    QimaComponent
   ],
   imports: [
     BrowserModule
