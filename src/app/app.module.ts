@@ -7,9 +7,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { QimaComponent } from './qimaQA/qima.component';
 import { CreateComponent } from './qimaQA/create/create.component';
+import { UpdateComponent } from './qimaQA/update/update.component';
 
 @NgModule({
-  declarations: [AppComponent, QimaComponent, CreateComponent],
+  declarations: [AppComponent, QimaComponent, CreateComponent, UpdateComponent],
   imports: [
     CommonModule,
     BrowserModule,

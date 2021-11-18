@@ -2,3 +2,11 @@
 .mb20 {
     margin-bottom: 20px;
 }
+
+.gray {
+    color: lightgray;
+}
+
+.pointer {
+    cursor: pointer;
+}

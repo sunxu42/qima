@@ -1,0 +1,23 @@
+<div id="createPage">
+    <div class="mb20" (click)="toMain()"><a class="pointer">main page</a></div>
+
+    <div class="mb20">
+        Status Name: <b><i>{{name}}</i></b><a class="pointer" (click)="deleteStatus()"> delete</a>
+        (After delete, back to main page, can not delete current status)
+    </div>
+
+    <div class="mb20">
+        Could be transferred to: (select the current target status by default)
+        <br />
+        <i class="gray">按ctrl进行多选操作（Press ctrl for multiple selection）</i>
+        <br />
+        <select multiple #selectRef>
+            <option *ngFor="let item of relation" [selected]="selected.includes(item.name)">{{item.name}}</option>
+        </select>
+    </div>
+
+    <div class="mb20">
+        <button (click)="updateStatus()">Update Status</button>
+        (update this status and the page elements)
+    </div>
+</div>

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router'; // CLI imports router
 import { CreateComponent } from './qimaQA/create/create.component';
 import { QimaComponent } from './qimaQA/qima.component';
-import { AppComponent } from './app.component';
+import { UpdateComponent } from './qimaQA/update/update.component';
 
 const routes: Routes = [
   {
@@ -16,6 +16,9 @@ const routes: Routes = [
   {
     path: 'create-status',
     component: CreateComponent,
+  },{
+    path: 'update-status',
+    component: UpdateComponent,
   },
 ]; // sets up routes constant where you define your routes
 
