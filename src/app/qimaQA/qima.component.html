@@ -1,3 +1,86 @@
-<div id='qima'>
-ffffffff
+<div id="qima">
+    <div class="content">
+        <div id="currentStatus" class="mb20">
+            <span>Current status is
+                <b><i>{{ "<" }}CurrentStatus{{ ">" }}</i></b></span>
+            <button (click)="toCreate()">createStatus</button>
+        </div>
+
+        <div id="updateStatus" class="mb20">
+            <span>Update status: </span>
+            <select>
+                <option value="Create Status" selected disabled hidden>Select a status</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+            </select>
+            <span>?(forward to update page directly after selection)</span>
+        </div>
+
+        <div id="transferred" class="mb20">
+            <span>Could be transferred to
+                <select>
+                    <option value="SelectValue" selected disabled hidden>Select a status</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                </select>
+                ?</span>
+            <br />
+            <span>
+                Yes(No), can (not) be transferred to
+                <b><i>{{ "<" }}SelectedStatus{{ ">" }}</i></b>
+                from
+                <b><i>{{ "<" }}CurrentStatus{{ ">" }}</i></b>
+            </span>
+        </div>
+
+        <div id="shortestRoute" class="mb20">
+            <span>How could be transferred to
+                <select>
+                    <option value="SelectValue" selected disabled hidden>Select a status</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                </select>
+                ?</span>
+            <br />
+            <b><i>{{ "<" }}CurrentStatus{{ ">" }}</i></b>
+            =>
+            <b><i>{{ "<" }}NextStatus{{ ">" }}</i></b>
+            =>...=>
+            <b><i>{{ "<" }}SelectedStatus{{ ">" }}</i></b>
+            <br />
+            <span>
+                (Find the shortest route, if no way then output: Can not be transferred
+                to
+                <b><i>{{ "<" }}SelectedStatus{{ ">" }}</i></b>
+                )
+            </span>
+        </div>
+
+        <div id="canNot">
+            <span>
+                Transferred to
+                <select title="ccccc">
+                    <option value="SelectValue" selected disabled hidden>Select a status</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                </select>
+                ?
+            </span>
+            <br />
+            <span>
+                (if target is tansferrable, no answers here, above two answers should be cleared and current status
+                should be updated, otherwise output. Can not be transferred to
+                <b><i>{{ "<" }}SelectedStatus{{ ">" }}</i></b>
+                )
+            </span>
+        </div>
+    </div>
 </div>

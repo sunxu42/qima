@@ -1,18 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
-  selector: 'qima',
-  templateUrl: './qima.component.html',
-  styleUrls: ['./qima.component.css'],
+  selector: 'create',
+  templateUrl: './create.component.html',
 })
-export class QimaComponent implements OnInit {
-  public relation = [
-    {
-      name: 'testaaaaaaaaaaaaaaaaaaaaaa',
-      transferr: 'test',
-    },
-  ];
+export class CreateComponent implements OnInit {
+  public relation = [];
+  public name = '';
   constructor(private route: ActivatedRoute, private router: Router) {}
   ngOnInit() {
     this.route.queryParams.subscribe((params) => {
@@ -21,8 +16,9 @@ export class QimaComponent implements OnInit {
       }
     });
   }
-  public toCreate() {
-    this.router.navigate(['create-status'], {
+
+  public toMain() {
+    this.router.navigate(['/qima'], {
       queryParams: { relation: JSON.stringify(this.relation) },
     });
   }

@@ -1,0 +1,24 @@
+<div id="createPage">
+    <div class="mb20" (click)="toMain()"><a href>main page</a></div>
+    
+    <div class="mb20">
+        <b>Status Name:</b>
+        <input type="text" placeholder="new status name" [(ngModel)]="name">
+    </div>
+
+    <div class="mb20">
+        <b>Could be transferred to:</b>
+        <br/>
+        <select multiple>
+            <!-- <ng-template [ngFor]="relation">
+                <option class="name">{{item.name}}</option>
+              </ng-template> -->
+            <option *ngFor="let item of relation">{{item.name}}</option>
+        </select>
+    </div>
+
+    <div class="mb20">
+        <button>Create Status</button>
+        <b>(create a new status and update the page elements with the new one, status should not be duplicated based on name)</b>
+    </div>
+</div>
